@@ -1,0 +1,10 @@
+name: iCommands
+version: 1.0.0
+main: vn.BengBeng.icmds.iCommands
+author: BengBeng
+api-version: 1.13
+softdepend: [Vault, PlayerPoints, PermissionsEx, LuckPerms]
+commands:
+  icommands:
+    description: 'Main commands.'
+    aliases: [icommand, icmds, icmd]

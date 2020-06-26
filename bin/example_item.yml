@@ -1,0 +1,121 @@
+#Tuỳ chỉnh vật phẩm:
+SETTINGS:
+  #Cho phép sử dụng vật phẩm này ?
+  enabled: true
+  #Vật liệu:
+  #type: '<tên hoặc ID>:<số lượng>:<dữ liệu (data)>'
+  type: 'paper:1:0'
+  #Tên hiển thị:
+  name: '&6&l-=[ &b&lExample Item &6&l]=-'
+  #Hiệu ứng phù phép giả:
+  glow: true
+  #Các dòng mô tả cho vật phẩm:
+  lore:
+  - '&aDòng mô tả 1.'
+  - '&bDòng mô tả 2.'
+  
+  #Thời gian hết hạn sử dụng của vật phẩm:
+  #Sử dụng định dạng dựa trên 'date-format' trong file config.yml
+  #Để trống hoặc đặt thành 'none' sẽ không có thời hạn.
+  date-expired: ''
+  
+  #Thời gian (giây) chờ mỗi khi sử dụng vật phẩm:
+  #Đặt về -1 nếu muốn vô hiệu hoá chức năng này.
+  cooldown: 3
+  
+  #Trao vật phẩm này cho người chơi tham gia máy chủ lần đầu tiên ?
+  first-join-receive: false
+  #Trao vật phẩm này cho người chơi tham gia máy chủ ?
+  join-receive: false
+  #Chỉ cho phép mỗi người chơi sử dụng vật phẩm này một lần duy nhất ?
+  one-use: false
+  
+  #Số lượng vật phẩm sẽ bị trừ đi sau khi sử dụng:
+  #Đặt thành -1 nếu muốn vô hiệu hoá chức năng này.
+  remove-on-use: 1
+
+#Phần yêu cầu để có thể sử dụng vật phẩm:
+# * Lưu ý các dấu ngoặc để tránh xảy ra lỗi khi sử dụng!
+#REQUIREMENT: {}
+REQUIREMENT:
+  #Yêu cầu quyền:
+  #Để trống nếu muốn vô hiệu hoá chức năng này.
+  #permission: ''
+  permission: icommands.use.example
+  #Yêu cầu rank (cấp bậc, yêu cầu có sử dụng plugin PermissionsEx hoặc LuckPerms):
+  #Để trống nếu muốn vô hiệu hoá chức năng này.
+  #Tên rank không phân biệt chữ hoa và chữ thường.
+  #rank: ''
+  rank: member
+  #Chỉ những người chơi được xác định trong danh sách dưới đây mới có thể sử dụng:
+  #Player: {}
+  Player:
+    #Để trống nếu muốn vô hiệu hoá chức năng này.
+    #values: []
+    values:
+    - Player1
+    - UriZelda
+    - Player2
+    #Cho phép xoá tên người chơi ra khỏi danh sách sau khi sử dụng vật phẩm ?
+    take: true
+  #Yêu cầu tiền (money, yêu cầu có sử dụng plugin Vault):
+  #Money: {}
+  Money:
+    #Số tiền, vui lòng ghi đúng định dạng:
+    #Đặt thành -1 nếu muốn vô hiệu hoá chức năng này.
+    value: 55.0
+    #Cho phép trừ số tiền của người chơi sau khi sử dụng vật phẩm ?
+    take: true
+  #Yêu cầu point (yêu cầu có sử dụng plugin PlayerPoints):
+  #Point: {}
+  Point:
+    #Số point, vui lòng ghi đúng định dạng:
+    value: 3
+    #Cho phép trừ số point của người chơi sau khi sử dụng vật phẩm ?
+    take: true
+
+#Phần thưởng mà người chơi sẽ nhận được:
+# * Lưu ý các dấu ngoặc để tránh xảy ra lỗi khi sử dụng!
+#REWARDS: {}
+REWARDS:
+  #Các vật phẩm:
+  #items: {}
+  items:
+    example_item_reward:
+      ==: org.bukkit.inventory.ItemStack
+      type: DIAMOND_SWORD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: §a§lKiếm §b§lThử §e§lNghiệm
+        lore:
+        - §aLore 1
+        - §bLore 2
+        - §cLore 3
+        enchants:
+          DURABILITY: 10
+  #Các câu lệnh được thực hiện:
+  # * KÝ HIỆU:
+  #  {player} - thay thế cho người chơi sử dụng vật phẩm.
+  #  {item} - tên hiển thị của vật phẩm.
+  #  {chance} - tỉ lệ thành công của câu lệnh.
+  # * HƯỚNG DẪN:
+  #- '<câu lệnh không cần />' : sử dụng lệnh thông thường.
+  #- '[OP] <câu lệnh không cần />' : sử dụng lệnh dựa trên quyền OP.
+  #- '[CONSOLE] <câu lệnh không cần />' : sử dụng lệnh trên CONSOLE.
+  #- '[BROADCAST] <thông điệp>' : gửi thông điệp cho tất cả người chơi.
+  #- '[MESSAGE] <thông điệp>' : gửi thông điệp cho người chơi sử dụng vật phẩm.
+  #- '[SOUND] <tên âm thanh>' : chơi âm thanh cho người chơi sử dụng vật phẩm.
+  #Thêm '<chance=(tỉ lệ %)>' ở cuối câu lệnh nếu muốn có thêm % thành công!
+  #Thêm '<delay=(thời gian bằng giây)>' ở cuối câu lệnh nếu muốn delay câu lệnh!
+  #commands: {}
+  commands:
+    #Thực hiện các câu lệnh thông thường:
+    #normal: []
+    normal:
+    - '[OP] say Test command with {chance}% success. <chance=50.0%>'
+    - '[MESSAGE] &aBạn vừa sử dụng vật phẩm &b{item}&a.'
+    #Thực hiện các câu lệnh ngẫu nhiên:
+    #random: []
+    random:
+    - '[SOUND] entity_Player_levelup'

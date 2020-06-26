@@ -1,0 +1,26 @@
+# !~~~~~~~~~~~~~~~~~~~~~~~~~! #
+#   + MADE BY: [BengBeng] +   #
+#     + VERSION: v1.0.0 +     #
+# !~~~~~~~~~~~~~~~~~~~~~~~~~! #
+
+#Định dạng thời gian:
+date-format: 'dd/MM/yyyy HH:mm:ss'
+
+#Định dạng đơn vị thời gian:
+format:
+  seconds: 'giây'
+  minutes: 'phút'
+  hours: 'giờ'
+  days: 'ngày'
+
+#Các quyền lợi của plugin:
+#Có thể thay đổi trực tiếp tại đây.
+PERMISSIONS:
+  Admin: icommands.admin
+  Help: icommands.command.help
+  Give: icommands.command.give
+  Create: icommands.command.create
+  Delete: icommands.command.delete
+  Clear: icommands.command.clear
+  List: icommands.command.list
+  Reload: icommands.command.reload

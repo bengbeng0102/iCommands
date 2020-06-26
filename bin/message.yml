@@ -1,0 +1,48 @@
+PREFIX: '&8[&ciCommands&8]&r '
+
+HELP:
+  header: '&8&l------=====[ &c&liCommands v{version} &8&l]=====------'
+  help: '&8 > &c/{label} <help|?> &f: &7Hiển thị trợ giúp này.'
+  give: '&8 > &c/{label} give <tên> [người chơi] [số lượng] &f: &7Trao vật phẩm.'
+  create: '&8 > &c/{label} create <tên> &f: &7Tạo một vật phẩm.'
+  delete: '&8 > &c/{label} delete <tên> &f: &7Xoá một vật phẩm.'
+  clear: '&8 > &c/{label} clear &f: &7Xoá tất cả vật phẩm.'
+  list: '&8 > &c/{label} list &f: &7Xem các vật phẩm hiện có.'
+  reload: '&8 > &c/{label} reload &f: &7Làm mới tập tin.'
+  footer: '&8&l----------------------------------------'
+
+SUCCESS:
+  config-reload: '{prefix}&aHoàn tất làm mới lại tập tin!'
+  
+  item-gave: '{prefix}&7Đã trao vật phẩm &ax{amount} &7[&r{item}&7] cho &b{player}&7.'
+  item-received: '{prefix}&7Đã nhận được vật phẩm &ax{amount} &7[&r{item}&7] từ &b{sender}&7.'
+  
+  item-created: '{prefix}&7Đã tạo thành công vật phẩm &a{item}&7.'
+  item-deleted: '{prefix}&7Đã xoá thành công vật phẩm &a{item}&7.'
+  item-cleared: '{prefix|&7Đã xoá tất cả &a{amount} &7vật phẩm!'
+  list-items: '{prefix}&7Hiện có &b{amount} &7vật phẩm: &8[&6{list}&8]'
+
+FAIL:
+  no-permission: '{prefix}&cBạn không có quyền để có thể làm điều này!'
+  too-many-args: '{prefix}&cBạn đã nhập quá nhiều đối tượng của câu lệnh!'
+  unknown-error: '{prefix}&cĐã xảy ra một lỗi không thể xác định!'
+  must-type-name: '{prefix}&cVui lòng nhập tên xác định của vật phẩm!'
+  name-existed: '{prefix}&cTên xác định &e{value} &cđã tồn tại!'
+  name-not-existed: '{prefix}&cTên xác định &e{value} &ckhông tồn tại!'
+  must-specify-player: '{prefix}&cHãy chỉ định một người chơi đang trực tuyến!'
+  player-not-found: '{prefix}&cNgười chơi &e{value} &ckhông tồn tại hoặc đang ngoại tuyến!'
+  not-number: '{prefix}&cGiá trị &e{value} &ckhông phải là một con số hợp lệ!'
+  no-item-existed: '{prefix}&cHiện không có bất kỳ vật phẩm nào đang tồn tại!'
+  inventory-is-full: '{prefix}&cTúi đồ của bạn đang đầy!'
+  
+  ON_USE:
+    item-is-disabled: '{prefix}&cKhông thể sử dụng vật phẩm đã bị vô hiệu hoá!'
+    must-slow: '{prefix}&cVui lòng đợi &b{time} &cđể có thể sử dụng tiếp!'
+    item-is-expired: '{prefix}&cVật phẩm đã hết hạn sử dụng!'
+    item-already-used: '{prefix}&cBạn đã sử dụng vật phẩm này trước đó!'
+    not-enough-item: '{prefix}&cBạn không có đủ &e{amount} &cvật phẩm để có thể sử dụng!'
+    no-permission: '{prefix}&cBạn không có quyền &e{permission} &cđể sử dụng vật phẩm này!'
+    rank-not-match: '{prefix}&cBạn không thuộc cấp bậc &e{rank} &cđể sử dụng vật phẩm này!'
+    player-not-allowed: '{prefix}&cBạn không được phép sử dụng vật phẩm này!'
+    not-enough-money: '{prefix}&cBạn không có đủ &e${money} &cđể sử dụng vật phẩm này!'
+    not-enough-point: '{prefix}&cBạn không có đủ &e{point} point &cđể sử dụng vật phẩm này!'
